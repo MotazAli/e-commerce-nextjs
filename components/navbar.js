@@ -6,12 +6,14 @@ const Navbar = ()=>{
     return (
         <nav className={styles.navbar}>
      {/* <!-- LOGO --> */}
-     <div className={styles.logo}>Cobra.</div>
-     {/* <!-- NAVIGATION MENU --> */}
+     <div className={styles.logo}>COBRA<span>.</span></div>
+     <div className={styles.rightbar}>
+      {/* <!-- NAVIGATION MENU --> */}
      <ul className={styles.navlinks}>
        {/* <!-- USING CHECKBOX HACK --> */}
        <input className={styles.checkbox} type="checkbox" id="checkbox_toggle" />
        <label for="checkbox_toggle" className={styles.hamburger}>&#9776;</label>
+       
        {/* <!-- NAVIGATION MENUS --> */}
        <div className={styles.menu}>
          <li> <Link href="/"><a>Home</a></Link></li>
@@ -24,11 +26,26 @@ const Navbar = ()=>{
              <li><Link href="/kids"><a>Kids</a></Link></li>
            </ul>
          </li>
-         <li><Link href="/ijjc"><a>IJJC</a></Link></li>
          <li><Link href="/about"><a>About</a></Link></li>
+         {/* <li><Link href="/about"><a>About</a></Link></li> */}
          <li><Link href="/login"><a>Login</a></Link></li>
+         <li className={styles.services}>
+            <Link href="/store"><a>User</a></Link>
+           {/* <!-- DROPDOWN MENU --> */}
+           <ul className={styles.dropdown}>
+             <li><Link href="/men"><a>Account</a></Link></li>
+             <li><Link href="/women"><a>Log out</a></Link></li>
+           </ul>
+         </li>
        </div>
      </ul>
+     {/* <label for="checkbox_toggle" className={styles.hamburger}><i class="fa fa-shopping-cart"></i></label> */}
+     <button className={styles.cartbtn}>
+      <i class="fa fa-shopping-cart"></i>
+      <span>10</span>
+     </button>
+     </div>
+     
    </nav>
     );
 }

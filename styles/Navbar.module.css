@@ -1,9 +1,21 @@
 /* NAVBAR STYLING STARTS */
+
+/* @font-face {
+  font-family: Anton;
+  src: url('http://fonts.cdnfonts.com/css/anton');
+} */
+
+@import url('https://fonts.googleapis.com/css?family=Anton');
+
+
 .navbar {
+  height: 60px;
   display: flex;
   align-items: center;
+  /* text-align: center; */
   justify-content: space-between;
-  padding: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
   /* background-color: teal; */
   color: #fff;
   border: 1px solid #ccc;
@@ -14,10 +26,33 @@
  }
  /* LOGO */
  .logo {
-  margin-left: 5%;
+  /* text-align: center; */
+  font-family:Anton;
+  margin-left: 2%;
   font-size: 32px;
-  font-weight: bold;
-  color: red;
+  /* font-weight: bold; */
+  color: #FF1616;
+  
+ }
+
+ .cartbtn{
+  background-color: white;
+  border: none;
+  outline: none;
+ }
+
+ .cartbtn i{
+  font-size:30px;
+  color: grey;
+ }
+
+ .logo span{
+  font-family:initial;
+ }
+
+ .rightbar{
+  display: flex;
+  align-items: center;
  }
  /* NAVBAR MENU */
  .menu {
@@ -48,6 +83,7 @@
   display: none;
   border-radius: 8px;
   top: 35px;
+  left: 0px;
  }
  .dropdown li + li {
   margin-top: 10px;
@@ -112,8 +148,10 @@
   display: block;
  }
  .dropdown {
-  left: 50%;
-  top: 30px;
+  /* left: 50%;
+  top: 30px; */
+  left: 5px;
+  top: 0px;
   transform: translateX(35%);
  }
  .dropdown li:hover {
