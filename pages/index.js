@@ -1,16 +1,14 @@
-import Image from 'next/image'
-import { Splide, SplideSlide } from '@splidejs/react-splide';
-import '@splidejs/react-splide/css';
+import ImageSlider from '../components/ImageSlider';
 
 export default function Home() {
-  const sliderOptions = {
-    // rewind: true,
-    width : 800,
-    fixedHeight:350,
-    gap   : '1rem',
-    autoplay:true
-  };
 
+const images = [
+  "v1663342514/sports/image1_f2dkyn.jpg",
+  "v1663342294/sports/cld-sample-5.jpg",
+  "v1663342293/sports/cld-sample-3.jpg"
+];
+
+ 
 
   return (
     <div className="container">
@@ -22,19 +20,8 @@ export default function Home() {
           Get started by editing <code>pages/index.js</code>
         </p>
 
+        <ImageSlider srcImages={images} />
         
-        <Splide options={sliderOptions} aria-label="My Favorite Images">
-          <SplideSlide>
-            <Image src="/image1.jpg" alt="Image 1"  width={800} height={350}/>
-          </SplideSlide>
-          <SplideSlide>
-            <Image src="/image2.jpg" alt="Image 2"  width={800} height={350}/>
-          </SplideSlide>
-        </Splide>
-
-
-
-
         {/* <div className="grid">
           <a href="https://nextjs.org/docs" className="card">
             <h3>Documentation &rarr;</h3>

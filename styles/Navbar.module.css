@@ -22,6 +22,7 @@
  }
  .navlinks a {
   color: black;
+  font-weight: 600;
   /* color: #fff; */
  }
  /* LOGO */
@@ -53,6 +54,7 @@
  .rightbar{
   display: flex;
   align-items: center;
+  margin-right: 2%;
  }
  /* NAVBAR MENU */
  .menu {
