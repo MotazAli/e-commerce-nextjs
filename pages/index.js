@@ -1,10 +1,19 @@
-
+import Image from 'next/image'
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+import '@splidejs/react-splide/css';
 
 export default function Home() {
+  const sliderOptions = {
+    // rewind: true,
+    width : 800,
+    fixedHeight:350,
+    gap   : '1rem',
+    autoplay:true
+  };
+
+
   return (
     <div className="container">
-      
-
         <h1 className="title">
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
@@ -13,7 +22,20 @@ export default function Home() {
           Get started by editing <code>pages/index.js</code>
         </p>
 
-        <div className="grid">
+        
+        <Splide options={sliderOptions} aria-label="My Favorite Images">
+          <SplideSlide>
+            <Image src="/image1.jpg" alt="Image 1"  width={800} height={350}/>
+          </SplideSlide>
+          <SplideSlide>
+            <Image src="/image2.jpg" alt="Image 2"  width={800} height={350}/>
+          </SplideSlide>
+        </Splide>
+
+
+
+
+        {/* <div className="grid">
           <a href="https://nextjs.org/docs" className="card">
             <h3>Documentation &rarr;</h3>
             <p>Find in-depth information about Next.js features and API.</p>
@@ -41,7 +63,7 @@ export default function Home() {
               Instantly deploy your Next.js site to a public URL with Vercel.
             </p>
           </a>
-        </div>
+        </div> */}
     </div>
   )
 }
