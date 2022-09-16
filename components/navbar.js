@@ -1,14 +1,44 @@
 import Link from 'next/link'
-import { useState } from 'react';
+import { useRouter } from 'next/router';
+import { useContext, useState } from 'react';
+import UserContext from '../pages/src/storage';
 import styles from '../styles/Navbar.module.css'
 
 const Navbar = ()=>{
+
+  const router = useRouter();
+  const [user,setUser] = useContext(UserContext);
   const [isChecked,setIsChecked] = useState(false);
 
   const handleCheckedMenu = (event) => setIsChecked(event.target.checked);
 
   const handleOnClickMenuItem = () => setIsChecked(false);
 
+  const handleOnClickLogout =() => {
+    setUser(null);
+    handleOnClickMenuItem();
+    router.push('/');
+  }
+
+  const loginLayout = () => {
+    return (
+      <li><Link href="/login"><a onClick={handleOnClickMenuItem}>Login</a></Link></li>
+    );
+  }
+
+
+  const UserLayout = () => {
+    return (
+      <li className={styles.services}>
+            <Link href="/account"><a onClick={handleOnClickMenuItem}>{user.name}</a></Link>
+           {/* <!-- DROPDOWN MENU --> */}
+           <ul className={styles.dropdown}>
+             <li><Link href="/account"><a onClick={handleOnClickMenuItem}>Account</a></Link></li>
+             <li><a onClick={handleOnClickLogout}>Log out</a></li>
+           </ul>
+      </li>
+    );
+  }
 
 
     return (
@@ -36,15 +66,19 @@ const Navbar = ()=>{
          </li>
          <li><Link href="/about"><a onClick={handleOnClickMenuItem}>About</a></Link></li>
          {/* <li><Link href="/about"><a>About</a></Link></li> */}
-         <li><Link href="/login"><a onClick={handleOnClickMenuItem}>Login</a></Link></li>
+
+         { (user != null)? UserLayout() : loginLayout() }
+
+         {/* <li><Link href="/login"><a onClick={handleOnClickMenuItem}>Login</a></Link></li>
          <li className={styles.services}>
             <Link href="/store"><a onClick={handleOnClickMenuItem}>User</a></Link>
-           {/* <!-- DROPDOWN MENU --> */}
            <ul className={styles.dropdown}>
              <li><Link href="/men"><a onClick={handleOnClickMenuItem}>Account</a></Link></li>
              <li><Link href="/women"><a onClick={handleOnClickMenuItem}>Log out</a></Link></li>
            </ul>
-         </li>
+         </li> */}
+
+
        </div>
      </ul>
      {/* <label for="checkbox_toggle" className={styles.hamburger}><i class="fa fa-shopping-cart"></i></label> */}
