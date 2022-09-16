@@ -1,7 +1,15 @@
 import Link from 'next/link'
+import { useState } from 'react';
 import styles from '../styles/Navbar.module.css'
 
 const Navbar = ()=>{
+  const [isChecked,setIsChecked] = useState(false);
+
+  const handleCheckedMenu = (event) => setIsChecked(event.target.checked);
+
+  const handleOnClickMenuItem = () => setIsChecked(false);
+
+
 
     return (
         <nav className={styles.navbar}>
@@ -11,30 +19,30 @@ const Navbar = ()=>{
       {/* <!-- NAVIGATION MENU --> */}
      <ul className={styles.navlinks}>
        {/* <!-- USING CHECKBOX HACK --> */}
-       <input className={styles.checkbox} type="checkbox" id="checkbox_toggle" />
+       <input checked={isChecked} onChange={handleCheckedMenu} className={styles.checkbox} type="checkbox" id="checkbox_toggle" />
        <label for="checkbox_toggle" className={styles.hamburger}>&#9776;</label>
        
        {/* <!-- NAVIGATION MENUS --> */}
        <div className={styles.menu}>
-         <li> <Link href="/"><a>Home</a></Link></li>
+         <li> <Link href="/"><a onClick={handleOnClickMenuItem}>Home</a></Link></li>
          <li className={styles.services}>
-            <Link href="/store"><a>Store</a></Link>
+            <Link href="/store"><a onClick={handleOnClickMenuItem}>Store</a></Link>
            {/* <!-- DROPDOWN MENU --> */}
            <ul className={styles.dropdown}>
-             <li><Link href="/men"><a>Men</a></Link></li>
-             <li><Link href="/women"><a>Women</a></Link></li>
-             <li><Link href="/kids"><a>Kids</a></Link></li>
+             <li><Link href="/men"><a onClick={handleOnClickMenuItem}>Men</a></Link></li>
+             <li><Link href="/women"><a onClick={handleOnClickMenuItem}>Women</a></Link></li>
+             <li><Link href="/kids"><a onClick={handleOnClickMenuItem}>Kids</a></Link></li>
            </ul>
          </li>
-         <li><Link href="/about"><a>About</a></Link></li>
+         <li><Link href="/about"><a onClick={handleOnClickMenuItem}>About</a></Link></li>
          {/* <li><Link href="/about"><a>About</a></Link></li> */}
-         <li><Link href="/login"><a>Login</a></Link></li>
+         <li><Link href="/login"><a onClick={handleOnClickMenuItem}>Login</a></Link></li>
          <li className={styles.services}>
-            <Link href="/store"><a>User</a></Link>
+            <Link href="/store"><a onClick={handleOnClickMenuItem}>User</a></Link>
            {/* <!-- DROPDOWN MENU --> */}
            <ul className={styles.dropdown}>
-             <li><Link href="/men"><a>Account</a></Link></li>
-             <li><Link href="/women"><a>Log out</a></Link></li>
+             <li><Link href="/men"><a onClick={handleOnClickMenuItem}>Account</a></Link></li>
+             <li><Link href="/women"><a onClick={handleOnClickMenuItem}>Log out</a></Link></li>
            </ul>
          </li>
        </div>
