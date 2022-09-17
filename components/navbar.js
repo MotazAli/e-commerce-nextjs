@@ -9,6 +9,7 @@ const Navbar = ()=>{
   const router = useRouter();
   const [user,setUser] = useContext(UserContext);
   const [isChecked,setIsChecked] = useState(false);
+  const [numberOfItems,setNumberOfItems] = useState(0);
 
   const handleCheckedMenu = (event) => setIsChecked(event.target.checked);
 
@@ -44,7 +45,15 @@ const Navbar = ()=>{
     return (
         <nav className={styles.navbar}>
      {/* <!-- LOGO --> */}
-     <div className={styles.logo}>COBRA<span>.</span></div>
+     <div style={{marginLeft:"2%"}} className="cobraKimonosLogoHolder">
+        <h1 style={{fontSize:"25px"}} className="cobraLogo">
+            COBRA   
+        </h1>
+        {/* <span style={{color:"red"}}>.</span> */}
+        <span className="dotLogo"></span>
+        <span style={{fontSize:"14px"}} className="KimonosLogo">Kimonos</span>
+    </div>
+     {/* <div className="logo">COBRA<span>.</span></div> */}
      <div className={styles.rightbar}>
       {/* <!-- NAVIGATION MENU --> */}
      <ul className={styles.navlinks}>
@@ -84,7 +93,7 @@ const Navbar = ()=>{
      {/* <label for="checkbox_toggle" className={styles.hamburger}><i class="fa fa-shopping-cart"></i></label> */}
      <button className={styles.cartbtn}>
       <i class="fa fa-shopping-cart"></i>
-      <span>10</span>
+      <span> {(numberOfItems > 0)?  numberOfItems : null} </span>
      </button>
      </div>
      

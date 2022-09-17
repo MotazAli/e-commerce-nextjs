@@ -26,15 +26,17 @@
   /* color: #fff; */
  }
  /* LOGO */
- .logo {
-  /* text-align: center; */
+ /* .logo {
   font-family:Anton;
   margin-left: 2%;
   font-size: 32px;
-  /* font-weight: bold; */
   color: #FF1616;
   
  }
+
+ .logo span{
+  font-family:initial;
+ } */
 
  .cartbtn{
   background-color: white;
@@ -47,9 +49,7 @@
   color: grey;
  }
 
- .logo span{
-  font-family:initial;
- }
+
 
  .rightbar{
   display: flex;
