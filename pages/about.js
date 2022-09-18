@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import classNames from 'classnames';
 import styles from '../styles/About.module.css'
 
 const About = ()=>{
@@ -6,7 +7,7 @@ const About = ()=>{
 
 
 
-        <div>
+        
             <div className="container">
 
 <div className={styles.aboutsection}>
@@ -50,40 +51,122 @@ As well as having a loyal and growing customer base, we are proud to support som
     <p>Resize the browser window to see that this page is responsive by the way.</p>
 </div>
 
-<h2 >Our Team</h2>
+<br/>
 
+<h2 >Meet Our Team</h2>
+
+<div style={{display:"flex"}}>
+    
+<div className={styles.card}>
+<Image className={styles.img} loading="lazy" height="100%" width="100%" layout="responsive" objectFit="fill"  src="/Fouzi.jpg"  alt="Fouzi Mezouari" />
+  <div className={styles.container}>
+    <h4><b>Fouzi Mezouari</b></h4>
+    <p>IJJC Professor Black belt 3rd degree - Delariva Paris.</p>
+    {/* <p></p> */}
+  </div>
+</div>
+
+<div className={styles.card}>
+<Image className={styles.img} loading="lazy"  height="100%" width="100%" layout="responsive" objectFit="fill" src="/AhmedBahgat.jpg"  alt="Ahmed Bahgat" />
+  <div className={styles.container}>
+    <h4><b>Ahmed Bahgat</b></h4>
+    <p>CEO Founder of COBRA.Kimonos and IJJC academy</p>
+  </div>
+</div>
 </div>
 
 
-<div className={styles.container}>
-    <div className={styles.column}>
+<br/>
+<br/>
+
+<h2 >Contact Us</h2>
+
+<div className={styles.contactContainer} >
+<div className={styles.contactContent} >
+<div className={styles.leftSide}>
+        <div className={styles.details}>
+          <i class="fa fa-map-marker"></i>
+          <div className={styles.topic}>Address</div>
+          <div className={styles.textOne}>Yasmin 4, Ja'far ibn Abi Talib - New Cairo 1</div>
+          {/* <div className={styles.textTwo}></div> */}
+        </div>
+        <div className={styles.details}>
+          <i class="fa fa-phone"></i>  &nbsp;
+          <a href="https://wa.me/201114491444"><i class="fa fa-whatsapp"></i></a>
+
+          
+          <div className={styles.topic}>Phone</div>
+          <div className={styles.textOne}>
+            <a href="tel:201114491444">+201114491444</a>
+            
+            </div>
+          <div className={styles.textTwo}>
+            
+            
+          </div>
+        </div>
+        <div className={styles.details}>
+          <i class="fa fa-envelope"></i>
+          <div className={styles.topic}>Email</div>
+          <div className={styles.textOne}>ahmed@gmail.com</div>
+          {/* <div className={styles.textTwo}>info.codinglab@gmail.com</div> */}
+        </div>
+      </div>
+
+
+      <div className={styles.rightSide}>
+        <div className={styles.topicText}>Send a message</div>
+        <p>If you have any question or any types of quries related to your order, you can send me message here. It's our pleasure to help you.</p>
+      <form action="#">
+        <div className={styles.inputBox}>
+          <input type="text" placeholder="Enter your name"/>
+        </div>
+        <div className={styles.inputBox}>
+          <input type="text" placeholder="Enter your email"/>
+        </div>
+        <div className={classNames(styles.inputBox,styles.messageBox)}>
+            <textarea placeholder='Your message...'  />
+        </div>
+        <div className={styles.button}>
+          <input type="button" value="Send Now"/>
+        </div>
+      </form>
+    </div>
+</div>
+</div>
+
+
+
+
+{/* <div className={styles.column}>
         <div className={styles.card}>
         <Image loading="lazy" height="100%" width="100%" layout="responsive" objectFit="fill"  src="/Fouzi.jpg"  alt="Fouzi Mezouari" />
         <div className={styles.container}>
             <h2>Fouzi Mezouari</h2>
             <p className={styles.title}>IJJC Professor</p>
             <p>Black belt 3rd degree - Delariva Paris.</p>
-            {/* <p>jane@example.com</p> */}
             <p><button className={styles.button}>Contact</button></p>
         </div>
         </div>
-    </div>
+    </div> */}
 
-    <div className={styles.column}>
+    {/* <div className={styles.column}>
         <div className={styles.card}>
         <Image loading="lazy"  height="100%" width="100%" layout="responsive" objectFit="fill" src="/AhmedBahgat.jpg"  alt="Ahmed Bahgat" />
         <div className={styles.container}>
             <h2>Ahmed Bahgat</h2>
             <p className={styles.title}>CEO Founder</p>
-            <p>Founder of COBRA. sports wear & IJJC academy</p>
-            {/* <p>jane@example.com</p> */}
+            <p>Founder of COBRA. sports wear and IJJC academy</p>
             <p><button className={styles.button}>Contact</button></p>
         </div>
         </div>
-    </div>
-    
+    </div> */}
+
 </div>
-        </div>
+
+
+
+        
 
         
 
