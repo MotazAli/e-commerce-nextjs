@@ -5,17 +5,11 @@ import { useContext, useState } from 'react';
 import styles from '../styles/Login.module.css'
 import UserContext from './src/storage';
 
-const Login = () => {
+const ForgotPassword = () => {
 
     const router = useRouter();
     const [_,setUser] = useContext(UserContext);
     const [isChecked,setIsChecked] = useState(true);
-
-
-    const onChangeHandler = (e) =>{
-        //e.preventDefault();
-        setIsChecked(!isChecked);
-    }
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -30,19 +24,10 @@ const Login = () => {
                 <div className={styles.container}>   
                     <label>Email Account: </label>   
                     <input className={styles.filed} type="text" placeholder="_@__.com" name="email" required/>  
-                    <label>Password: </label>   
-                    <input className={styles.filed} type="password" placeholder="Enter Password" name="password" required/>  
-                    
-                    <input type="checkbox" value={isChecked}  onChange={onChangeHandler} /> Remember me 
-                    <button className={styles.button} type="submit">Login</button>   
+                    <button className={styles.button} type="submit">Reset Password</button>   
                     <label className={styles.newline}>
-                        <Link href="/forgotpassword">
-                        <a>Forgot password?  </a>
-                        </Link>
-                    </label> 
-                    <label className={styles.newline}>
-                        <Link href="/signup">
-                        <a>A new member! - Sign Up  </a>
+                        <Link href="/login">
+                        <a>Already a member! - login  </a>
                         </Link>
                     </label> 
                     
@@ -55,4 +40,4 @@ const Login = () => {
     );
 }
 
-export default Login;
+export default ForgotPassword;

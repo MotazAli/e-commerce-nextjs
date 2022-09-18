@@ -1,21 +1,16 @@
-import classNames from 'classnames';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useContext, useState } from 'react';
 import styles from '../styles/Login.module.css'
 import UserContext from './src/storage';
 
-const Login = () => {
+const Signup = () => {
 
     const router = useRouter();
     const [_,setUser] = useContext(UserContext);
     const [isChecked,setIsChecked] = useState(true);
 
 
-    const onChangeHandler = (e) =>{
-        //e.preventDefault();
-        setIsChecked(!isChecked);
-    }
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -28,22 +23,18 @@ const Login = () => {
         
             <form className={styles.form} onSubmit={handleSubmit}>  
                 <div className={styles.container}>   
-                    <label>Email Account: </label>   
+                    <label>Name: </label>   
+                    <input className={styles.filed} type="text" placeholder="Enter Name" name="name" required/>  
+                    
+                    <label>Email: </label>   
                     <input className={styles.filed} type="text" placeholder="_@__.com" name="email" required/>  
+                    
                     <label>Password: </label>   
                     <input className={styles.filed} type="password" placeholder="Enter Password" name="password" required/>  
                     
-                    <input type="checkbox" value={isChecked}  onChange={onChangeHandler} /> Remember me 
-                    <button className={styles.button} type="submit">Login</button>   
+                    <button className={styles.button} type="submit">Sign up</button>   
                     <label className={styles.newline}>
-                        <Link href="/forgotpassword">
-                        <a>Forgot password?  </a>
-                        </Link>
-                    </label> 
-                    <label className={styles.newline}>
-                        <Link href="/signup">
-                        <a>A new member! - Sign Up  </a>
-                        </Link>
+                        <Link href="/login"><a>Already a member! - Login here  </a></Link>    
                     </label> 
                     
 
@@ -55,4 +46,4 @@ const Login = () => {
     );
 }
 
-export default Login;
+export default Signup;
