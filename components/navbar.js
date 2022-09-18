@@ -91,7 +91,7 @@ const Navbar = ()=>{
        </div>
      </ul>
      {/* <label for="checkbox_toggle" className={styles.hamburger}><i class="fa fa-shopping-cart"></i></label> */}
-     <button className={styles.cartbtn}>
+     <button onClick={() => router.push('/cart') } className={styles.cartbtn}>
       <i class="fa fa-shopping-cart"></i>
       <span> {(numberOfItems > 0)?  numberOfItems : null} </span>
      </button>
