@@ -1,7 +1,15 @@
+import classNames from 'classnames';
 import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import styles from '../styles/Cart.module.css'
 
 const Cart= () => {
+
+  const router = useRouter();
+
+
+
     return (
         <div className={styles.container} >
             <div className={styles.shoppingCart}>
@@ -76,6 +84,46 @@ const Cart= () => {
  
   
 </div>
+
+
+<div >
+    <div className={styles.card}>
+        <div className={styles.paymentDetails}>
+            <h3>Summary Payment</h3>
+            <p>By checkout you will complete your purchase by providing your payment details.</p>
+        </div>
+        
+        <div className={styles.inputText}>
+            <input type="text" placeholder="BLACKWEDNESDAY"/>
+            <span>Discount code</span>
+        </div>
+        <div className={styles.summary}>
+            <div className={styles.textData}>
+                <p>Subtotal</p>
+                <p>Discount</p>
+                <p>VAT(20%)</p>
+                <h5>Total</h5>
+            </div>
+            <div className={styles.numericalData}>
+                <p>$19.00</p>
+                <p>$5.00</p>
+                <p>$2.80</p>
+                <h5>$16.80</h5>
+            </div>
+        </div>
+        <div className={styles.pay}>
+            <button onClick={() => router.push('/checkout') }>Checkout</button>
+        </div>
+        
+        
+        
+    </div>
+    
+</div>
+
+
+
+
         </div>
     );
 }
