@@ -68,9 +68,9 @@ const Navbar = ()=>{
             <Link href="/store"><a onClick={handleOnClickMenuItem}>Store</a></Link>
            {/* <!-- DROPDOWN MENU --> */}
            <ul className={styles.dropdown}>
-             <li><Link href="/men"><a onClick={handleOnClickMenuItem}>Men</a></Link></li>
-             <li><Link href="/women"><a onClick={handleOnClickMenuItem}>Women</a></Link></li>
-             <li><Link href="/kids"><a onClick={handleOnClickMenuItem}>Kids</a></Link></li>
+             <li><Link href='/category/men'><a onClick={handleOnClickMenuItem}>Men</a></Link></li>
+             <li><Link href='/category/women'><a onClick={handleOnClickMenuItem}>Women</a></Link></li>
+             <li><Link href='/category/kids'><a onClick={handleOnClickMenuItem}>Kids</a></Link></li>
            </ul>
          </li>
          <li><Link href="/about"><a onClick={handleOnClickMenuItem}>About</a></Link></li>

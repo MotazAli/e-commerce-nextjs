@@ -1,0 +1,35 @@
+.container:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.container h1{
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.column {
+    float: left;
+    /* width: 33.33%; */
+    /* width: 30%; */
+    width: 200px;
+    /* padding: 10px; */
+    height: 250px; 
+    /* margin: 1rem; */
+    margin: 2rem;
+    /* padding: 1.5rem; */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 5px;
+  }
+
+  .column:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+
+  .column h3 {
+    text-align: center;
+  }
+
+  
