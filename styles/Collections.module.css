@@ -1,0 +1,140 @@
+
+
+
+.productFilter {
+    display: flex;
+    width: 100%;
+    padding: 0px 3rem;
+  }
+
+.productFilter h1 {
+    flex-grow: 1;
+  }
+
+  .sort {
+    display: flex;
+    align-items: center;
+  }
+
+
+  .collectionSort {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0px 1rem;
+  }
+
+  .productCard {
+    padding: 4px;
+    /* flex-grow: 1;
+    flex-basis: 16%; */
+    /* flex: 1 16%; */
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 20%;
+    display: flex; /* so child elements can use flexbox stuff too! */
+    flex-flow: column;
+    margin: 2%;
+    /* background-color: rgba(240, 248, 255, 0.531); */
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 5px;
+    
+  }
+
+  /* .products .productCard:first-child, 
+.products .productCard:nth-child(2) {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 22%;
+} */
+
+  .productImage  {
+    /* height: 180px; */
+    height: 206px;
+    width: auto;
+  }
+
+  .productImage img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .productInfo {
+    margin-top: 1px;
+    width: 100%;
+  }
+
+
+ 
+
+
+  .button {
+    color: #fff;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    /* background: #3e2093; */
+    background: #FF1616;;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+  }
+  .button:hover {
+    /* background: #5029bc; */
+    background: green;
+  }
+
+
+  .productInfo h5, 
+  .productInfo h6{
+    margin: 5px 0px;
+    text-align: center;
+    align-content: center;
+  }
+
+
+  @media (max-width: 480px) {
+
+    .productCard {
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 45%;
+      /* flex: 1 46%; */
+    }
+
+    .productFilter {
+      flex-direction: column;
+    }
+    .sort {
+      align-self: flex-start;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .productCard {
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 42%;
+      /* flex: 1 46%; */
+    }
+  }
+
+
+  @media (max-width: 400px) {
+    .productCard {
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 63%;
+      /* flex: 1 46%; */
+    }
+  }

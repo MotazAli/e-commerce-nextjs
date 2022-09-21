@@ -45,7 +45,7 @@ const Category = ({slug}) =>{
             <h1>{slug}</h1>
 
             { categories.map((category,index)=>{
-                return <CategoryItem category={category} />
+                return <CategoryItem key={category.id} category={category} />
              }) }
 
         </div> 
