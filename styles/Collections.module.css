@@ -9,6 +9,7 @@
 
 .productFilter h1 {
     flex-grow: 1;
+    text-transform: capitalize;
   }
 
   .sort {

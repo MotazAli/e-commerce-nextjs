@@ -90,7 +90,7 @@ const Cart= () => {
     <div className={styles.card}>
         <div className={styles.paymentDetails}>
             <h3>Summary Payment</h3>
-            <p>By checkout you will complete your purchase by providing your payment details.</p>
+            <p>You will complete your purchase by checkout and providing your payment details.</p>
         </div>
         
         <div className={styles.inputText}>
