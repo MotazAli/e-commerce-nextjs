@@ -1,7 +1,7 @@
 import '../styles/globals.css'
 import Layout from '../components/layout'
 import { useState } from 'react'
-import UserContext from './src/storage';
+import UserContext from '../src/storage';
 
 export default function MyApp({ Component, pageProps }) {
 

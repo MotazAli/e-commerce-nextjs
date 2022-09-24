@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router';
 import { useContext, useState } from 'react';
-import UserContext from '../pages/src/storage';
+import UserContext from '../src/storage';
 import styles from '../styles/Navbar.module.css'
 
 const Navbar = ()=>{

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useContext, useState } from 'react';
 import styles from '../styles/Login.module.css'
-import UserContext from './src/storage';
+import UserContext from '../src/storage';
 
 const Signup = () => {
 
