@@ -95,6 +95,7 @@
   padding: 0.5em 1em;
   width: 8em;
   text-align: center;
+  cursor: pointer;
  }
  .dropdown li:hover {
   /* background-color: #4c9e9e; */

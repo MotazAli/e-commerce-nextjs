@@ -34,7 +34,7 @@ const Navbar = ()=>{
             <Link href="/account"><a onClick={handleOnClickMenuItem}>{user.name}</a></Link>
            {/* <!-- DROPDOWN MENU --> */}
            <ul className={styles.dropdown}>
-             <li><Link href="/account"><a onClick={handleOnClickMenuItem}>Account</a></Link></li>
+             <Link href="/account"><li><a onClick={handleOnClickMenuItem}>Account</a></li></Link>
              <li><a onClick={handleOnClickLogout}>Log out</a></li>
            </ul>
       </li>
@@ -68,9 +68,9 @@ const Navbar = ()=>{
             <Link href="/store"><a onClick={handleOnClickMenuItem}>Store</a></Link>
            {/* <!-- DROPDOWN MENU --> */}
            <ul className={styles.dropdown}>
-             <li><Link href='/category/men'><a onClick={handleOnClickMenuItem}>Men</a></Link></li>
-             <li><Link href='/category/women'><a onClick={handleOnClickMenuItem}>Women</a></Link></li>
-             <li><Link href='/category/kids'><a onClick={handleOnClickMenuItem}>Kids</a></Link></li>
+             <Link href='/category/men'><li><a onClick={handleOnClickMenuItem}>Men</a></li></Link>
+             <Link href='/category/women'><li><a onClick={handleOnClickMenuItem}>Women</a></li></Link>
+             <Link href='/category/kids'><li><a onClick={handleOnClickMenuItem}>Kids</a></li></Link>
            </ul>
          </li>
          <li><Link href="/about"><a onClick={handleOnClickMenuItem}>About</a></Link></li>
