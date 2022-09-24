@@ -135,6 +135,7 @@
   left: 0;
   text-align: center;
   padding: 16px 0;
+  z-index: 10000;
  }
  .menu li:hover {
   display: inline-block;
