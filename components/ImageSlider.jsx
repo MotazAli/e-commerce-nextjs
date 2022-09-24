@@ -20,7 +20,7 @@ const ImageSlider = ({srcImages}) => {
       return (
         <Splide options={sliderOptions} aria-label="My Favorite Images">
             {srcImages.map((src,index) => {
-                return (<SplideSlide>
+                return (<SplideSlide key={index} >
                             <Image loading="lazy" loader={imageLoader} src={src} alt={`image`+ index}  width={800} height={350}/>
                         </SplideSlide>);
             })}

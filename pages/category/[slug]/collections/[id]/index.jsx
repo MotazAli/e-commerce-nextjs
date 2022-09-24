@@ -39,14 +39,14 @@ export default function Collections({slug,id}) {
     const router = useRouter();
 
     const items = [
-        {id:1,title:'Gi white',price:99.9, srcImg:'/image1.jpg'},
-        {id:2,title:'Gi black',price:99.9, srcImg:'/image2.jpg'},
-        {id:3,title:'Gi blue',price:99.9, srcImg:'/image1.jpg'},
+        {id:1,title:'white',price:99.9, srcImg:'/image1.jpg'},
+        {id:2,title:'black',price:99.9, srcImg:'/image2.jpg'},
+        {id:3,title:'blue',price:99.9, srcImg:'/image1.jpg'},
     ];
 
 
     const onclickItemHandler = (event,productId) => {
-        router.push(`/category/${slug}/collection/${id}/products/${productId}`);
+        router.push(`/category/${slug}/collections/${id}/products/${productId}`);
     }
 
     return (

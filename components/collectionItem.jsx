@@ -3,7 +3,7 @@ import styles from '../styles/Collections.module.css';
 
 export default function CollectionItem({item,onClickHandler}){
     return (
-        <div onClick={(e) => onClickHandler(e)} className={styles.productCard}>
+        <div onClick={(e) => onClickHandler(e,item.title)} className={styles.productCard}>
                 <div className={styles.productImage}>
                 <Image src={item.srcImg} height="100%" width="100%" layout="responsive" objectFit="cover"/>
                 </div>
