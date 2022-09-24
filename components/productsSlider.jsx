@@ -29,6 +29,13 @@ export default function ProdcutsSlider({products}){
 
     useEffect(() => {
       function handleWindowResize() {
+        const {innerWidth, innerHeight} = getWindowSize();
+        if(innerWidth != 0 && innerWidth <= 700)
+        {
+            setSliderOptions({ ...sliderOptions ,perPage:3 ,gap: '6rem'})
+        } else {
+            setSliderOptions(initSliderOptions)
+        }
         setWindowSize(getWindowSize());
       }
   
@@ -41,7 +48,7 @@ export default function ProdcutsSlider({products}){
 
 
     useEffect(() => {
-        if(windowSize.innerWidth < 700)
+        if(windowSize.innerWidth != 0 &&  windowSize.innerWidth <= 700)
         {
             setSliderOptions({ ...sliderOptions ,perPage:3 ,gap: '6rem'})
         } else {
