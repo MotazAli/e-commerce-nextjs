@@ -1,12 +1,12 @@
 
 @import url('https://fonts.googleapis.com/css?family=Anton');
-/* @import url('http://fonts.cdnfonts.com/css/gellatio-personal-use'); */
+@import url('https://fonts.cdnfonts.com/css/gellatio-personal-use');
 
 
-@font-face {
+/* @font-face {
   font-family: 'Gellatio Personal Use';
   src: url(../Gellatio-Regular.ttf);
-}
+} */
 
 html,
 body {
