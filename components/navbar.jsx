@@ -46,12 +46,12 @@ const Navbar = ()=>{
         <nav className={styles.navbar}>
      {/* <!-- LOGO --> */}
      <div style={{marginLeft:"2%"}} className="cobraKimonosLogoHolder">
-        <h1 style={{fontSize:"25px"}} className="cobraLogo">
+        <h1 style={{fontSize:"30px"}} className="cobraLogo">
             COBRA   
         </h1>
         {/* <span style={{color:"red"}}>.</span> */}
-        <span className="dotLogo"></span>
-        <span style={{fontSize:"14px"}} className="KimonosLogo">Kimonos</span>
+        {/* <span className="dotLogo"></span>
+        <span style={{fontSize:"14px"}} className="KimonosLogo">Kimonos</span> */}
     </div>
      {/* <div className="logo">COBRA<span>.</span></div> */}
      <div className={styles.rightbar}>

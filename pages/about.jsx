@@ -17,8 +17,8 @@ const About = ()=>{
             COBRA   
         </h1>
         {/* <span style={{color:"red"}}>.</span> */}
-        <span className="dotLogo"></span>
-        <span className="KimonosLogo">Kimonos</span>
+        {/* <span className="dotLogo"></span>
+        <span className="KimonosLogo">Kimonos</span> */}
     </div>
     {/* <h1 className="logoFontColor">
         COBRA<span>.</span>
