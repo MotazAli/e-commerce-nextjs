@@ -13,9 +13,8 @@ const About = ()=>{
 <div className={styles.aboutsection}>
 
 <div  className="cobraKimonosLogoHolder">
-        <h1  className="cobraLogo">
-            COBRA   
-        </h1>
+<Image src="/cobra.png" height="35px" width="100px" alt='cobra logo' />
+        {/* <h1  className="cobraLogo">COBRA </h1> */}
         {/* <span style={{color:"red"}}>.</span> */}
         {/* <span className="dotLogo"></span>
         <span className="KimonosLogo">Kimonos</span> */}

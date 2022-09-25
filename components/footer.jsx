@@ -10,7 +10,7 @@ const Footer = ()=>{
 
             
             {/* <a href="#" style={{marginLeft: "20px"}} className="fa fa-facebook"></a> */}
-            <a href="#" style={{marginLeft: "10px"}} className="fa fa-instagram"></a>
+            <a href="https://www.instagram.com/cobra.kimonos/"  target="_blank" style={{marginLeft: "10px"}} className="fa fa-instagram"></a>
 
         {/* <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"

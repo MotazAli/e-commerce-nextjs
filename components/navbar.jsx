@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link'
 import { useRouter } from 'next/router';
 import { useContext, useState } from 'react';
@@ -46,9 +47,8 @@ const Navbar = ()=>{
         <nav className={styles.navbar}>
      {/* <!-- LOGO --> */}
      <div style={{marginLeft:"2%"}} className="cobraKimonosLogoHolder">
-        <h1 style={{fontSize:"30px"}} className="cobraLogo">
-            COBRA   
-        </h1>
+     <Image src="/cobra.png" height="35px" width="100px" alt='cobra logo' />
+        {/* <h1 style={{fontSize:"30px"}} className="cobraLogo">COBRA</h1> */}
         {/* <span style={{color:"red"}}>.</span> */}
         {/* <span className="dotLogo"></span>
         <span style={{fontSize:"14px"}} className="KimonosLogo">Kimonos</span> */}
