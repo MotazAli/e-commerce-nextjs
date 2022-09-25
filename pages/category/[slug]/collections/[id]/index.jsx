@@ -51,7 +51,7 @@ export default function Collections({slug,id}) {
 
     return (
 
-<div style={{display: "contents"}}>
+<div >
 
 
 

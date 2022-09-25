@@ -43,7 +43,7 @@ const products = [
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1> */}
 
-        <p className="description">
+        <p className={styles.description}>
           All sports wear in one place
         </p>
         <code>we deliver quality</code>

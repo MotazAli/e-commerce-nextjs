@@ -7,7 +7,8 @@ const ImageSlider = ({srcImages}) => {
     const sliderOptions = {
         // rewind: true,
         width : 800,
-        fixedHeight:350,
+        Height:350,
+        //fixedHeight:350,
         gap   : '1rem',
         autoplay:true
       };

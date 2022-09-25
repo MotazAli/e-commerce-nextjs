@@ -55,8 +55,17 @@ As well as having a loyal and growing customer base, we are proud to support som
 
 <h2 >Meet Our Team</h2>
 
-<div style={{display:"flex"}}>
-    
+<div className={styles.teamContainer}>
+
+
+<div className={styles.card}>
+<Image className={styles.img} loading="lazy"  height="100%" width="100%" layout="responsive" objectFit="fill" src="/AhmedBahgat.jpg"  alt="Ahmed Bahgat" />
+  <div className={styles.container}>
+    <h4><b>Ahmed Bahgat</b></h4>
+    <p>CEO Founder of COBRA.Kimonos and IJJC academy</p>
+  </div>
+</div>
+
 <div className={styles.card}>
 <Image className={styles.img} loading="lazy" height="100%" width="100%" layout="responsive" objectFit="fill"  src="/Fouzi.jpg"  alt="Fouzi Mezouari" />
   <div className={styles.container}>
@@ -66,13 +75,7 @@ As well as having a loyal and growing customer base, we are proud to support som
   </div>
 </div>
 
-<div className={styles.card}>
-<Image className={styles.img} loading="lazy"  height="100%" width="100%" layout="responsive" objectFit="fill" src="/AhmedBahgat.jpg"  alt="Ahmed Bahgat" />
-  <div className={styles.container}>
-    <h4><b>Ahmed Bahgat</b></h4>
-    <p>CEO Founder of COBRA.Kimonos and IJJC academy</p>
-  </div>
-</div>
+
 </div>
 
 

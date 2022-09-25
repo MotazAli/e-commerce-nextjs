@@ -15,7 +15,25 @@ export default function ProdcutsSlider({products}){
     const initSliderOptions = {
         type      : 'loop',
         rewind: true,
-        perPage   :5,
+        breakpoints: {
+          640: {
+            perPage: 2,
+      
+          },
+          768: {
+            perPage: 2,
+        
+          },
+          1024: {
+            perPage: 3,
+           
+          },
+          1440: {
+            perPage: 5,
+           
+          },
+        },
+        //perPage   :5,
         width : 'auto',
         // perMove   : 1,
         gap       : '2rem',
@@ -24,38 +42,38 @@ export default function ProdcutsSlider({products}){
         height    : 200,
       };
 
-    const [windowSize, setWindowSize] = useState({innerWidth:0, innerHeight:0});
-    const [sliderOptions,setSliderOptions] = useState(initSliderOptions);
+    //const [windowSize, setWindowSize] = useState({innerWidth:0, innerHeight:0});
+    //const [sliderOptions,setSliderOptions] = useState(initSliderOptions);
 
-    useEffect(() => {
-      function handleWindowResize() {
-        const {innerWidth, innerHeight} = getWindowSize();
-        if(innerWidth != 0 && innerWidth <= 700)
-        {
-            setSliderOptions({ ...sliderOptions ,perPage:3 ,gap: '6rem'})
-        } else {
-            setSliderOptions(initSliderOptions)
-        }
-        setWindowSize(getWindowSize());
-      }
+    // useEffect(() => {
+    //   function handleWindowResize() {
+    //     const {innerWidth, innerHeight} = getWindowSize();
+    //     if(innerWidth != 0 && innerWidth <= 700)
+    //     {
+    //         setSliderOptions({ ...sliderOptions ,perPage:3 ,gap: '6rem'})
+    //     } else {
+    //         setSliderOptions(initSliderOptions)
+    //     }
+    //     setWindowSize(getWindowSize());
+    //   }
   
-      window.addEventListener('resize', handleWindowResize);
+    //   window.addEventListener('resize', handleWindowResize);
   
-      return () => {
-        window.removeEventListener('resize', handleWindowResize);
-      };
-    }, []);
+    //   return () => {
+    //     window.removeEventListener('resize', handleWindowResize);
+    //   };
+    // }, []);
 
 
-    useEffect(() => {
-        if(windowSize.innerWidth != 0 &&  windowSize.innerWidth <= 700)
-        {
-            setSliderOptions({ ...sliderOptions ,perPage:3 ,gap: '6rem'})
-        } else {
-            setSliderOptions(initSliderOptions)
-        }
+    // useEffect(() => {
+    //     if(windowSize.innerWidth != 0 &&  windowSize.innerWidth <= 700)
+    //     {
+    //         setSliderOptions({ ...sliderOptions ,perPage:3 ,gap: '6rem'})
+    //     } else {
+    //         setSliderOptions(initSliderOptions)
+    //     }
         
-      }, [windowSize.innerWidth]);
+    //   }, [windowSize.innerWidth]);
 
     
 
@@ -68,7 +86,7 @@ export default function ProdcutsSlider({products}){
       }
 
     return (
-        <Splide options={sliderOptions} aria-label="My Favorite Images">
+        <Splide options={initSliderOptions} aria-label="My Favorite Images">
               {products.map((item,index) => {
                   return (<SplideSlide key={index} >
                               <div className={styles.item} >

@@ -13,6 +13,18 @@
 }
 
 
+.gellatioFont{
+    font-family:'Gellatio Personal Use';
+}
+
+.description {
+    line-height: 1.5;
+    font-size: 1.5rem;
+    font-family:'Gellatio Personal Use';
+    text-align: center;
+  }
+
+
 .item{
     width: 170px;
     height: 200px;
